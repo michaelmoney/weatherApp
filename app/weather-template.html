@@ -1,41 +1,52 @@
 <section class="weather-box">
-    <div class="splash">
+<!--    <div class="splash">
         <h2>We believe in the power of participation.</h2>
         <div class="logo"></div>
 
-    </div>
-    <div class="inner">
-<!--
-        <div class="item country-selector">
-            <div class="prev">&#60;</div>
-            <div class="countries">
-                <a class="active" data-city="los angeles, us">Los Angeles</a>
-                <a data-city="warsaw,pl">Warsaw</a>
-                <a data-city="tokyo,jp">Tokyo</a>
-                <a data-city="london,uk">London</a>
-                <a data-city="new york,us">New York</a>
-                <a data-city="seoul,kr">Seul</a>
-            </div>
-            <div class="next">&#62;</div>
+    </div>-->
+    <section class="menu" ng-show="isMenuVisible">
+        <h3>Ustawienia wyświetlania:</h3>
+        <div class="checkboxes">
+            <div  class="checkbox" ng-click="showMaxMinTemp = !showMaxMinTemp"><i ng-class="{'checked': showMaxMinTemp}" class="fa fa-check"></i>max. i min. temperatura</div>
+
+            <div  class="checkbox" ng-click="showHumidity = !showHumidity"><i ng-class="{'checked': showHumidity}" class="fa fa-check"></i>Wilgotność</div>
+            <div  class="checkbox" ng-click="showPressure = !showPressure"><i ng-class="{'checked': showPressure}" class="fa fa-check"></i>Ciśnienie</div>
+
         </div>
--->
+        <div class="close-menu" ng-click="isMenuVisible = !isMenuVisible">Powrót</div>
+
+    </section>
+    <div class="inner">
+<!--        <div class="item country-selector">
+            <div class="prev" ng-click="prev()">&#60;</div>
+            <div class="countries" ng-repeat="city in cities track by $index">
+                <a ng-class="{'active': city.isActive}">{{city.name}}</a>
+            </div>
+
+        </div>-->
 
         <div class="city item">
+            <div class="prev" ng-click="prev()">&#60;</div>
             <span id="city">{{weather.city || 'brak'}}</span>, <span id="cc">{{weather.cc || 'brak'}}</span>
+            <div class="next" ng-click="next()">&#62;</div>
         </div>
         <div class="description item">
             <span id="description">{{weather.description || 'brak'}}</span>
         </div>
         <div class="icon item">
-            <img src="" id="icon"/>
+            <img src="{{weather.icon}}" id="icon"/>
         </div>
         <div class="temperature item">
             <span id="temperature">{{weather.temp || '--'}}</span>&deg;C
         </div>
-        <div class="humidity item">
+        <div ng-hide="!showMaxMinTemp" class="max-temperatures item">
+            Min. temp.:<span id="max-temperature">{{weather.tempMin || '--'}}</span>&deg;C
+            Max. temp.:<span id="min-temperature">{{weather.tempMax || '--'}}</span>&deg;C
+        </div>
+        <div ng-hide="!showHumidity" class="humidity item">
             Wilgotność:<span id="humidity">{{weather.humidity || '--'}}</span>%
         </div>
-        <div class="pressure item">
+        <div ng-hide="!showPressure" class="pressure item">
             Ciśnienie:<span id="pressure">{{weather.pressure || '--'}}</span>hPa
         </div>
     </div>
@@ -44,10 +55,9 @@
 <!--    <section class="credits">
         <img src="http://logonoid.com/images/accuweather-logo.png"/>
     </section>-->
-    <!--
-        <section class="about">
-            <img src="http://michaelmoney.pl/img/logo.png" alt="Michael Money logo">
+        <section class="about" ng-click="isMenuVisible = !isMenuVisible">
+            <i class="fa fa-cog"></i> Settings
+           <!-- <img src="http://michaelmoney.pl/img/logo.png" alt="Michael Money logo">-->
         </section>
-    -->
 
 </section>
