@@ -4,5 +4,8 @@
   "author": {
     "name": "Michael Money",
     "url": "http://michaelmoney.pl"
+  },
+  "devDependencies": {
+    "angular": "^1.5.0"
   }
 }
