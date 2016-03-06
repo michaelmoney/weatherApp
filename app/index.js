@@ -8,6 +8,7 @@ weatherApp.directive('weatherApp', ['$http', '$httpParamSerializer', function ($
         templateUrl: './weather-template.html',
         scope: true,
         link: function(scope, elem) {
+
             function mapPrettyIcons(name) {
                 switch(name) {
                     case '01d': return '01-s';
@@ -77,38 +78,39 @@ weatherApp.directive('weatherApp', ['$http', '$httpParamSerializer', function ($
             };
 
 
-            scope.cities = [{
-                name: 'Warsaw',
-                cc: 'pl',
-                isActive: true
-            },
-            {
-                name: 'Los Angeles',
-                cc: 'us',
-                isActive: false
-            },
-            {
-                name: 'London',
-                cc: 'uk',
-                isActive: false
-            },
+            scope.cities = [
+                {
+                    name: 'Warsaw',
+                    cc: 'pl',
+                    isActive: true
+                },
+                {
+                    name: 'Los Angeles',
+                    cc: 'us',
+                    isActive: false
+                },
+                {
+                    name: 'London',
+                    cc: 'uk',
+                    isActive: false
+                },
 
-            {
-                name: 'New York',
-                cc: 'us',
-                isActive: false
-            },
-            {
-                name: 'Tokyo',
-                cc: 'jp',
-                isActive: false
-            },
-            {
-                name: 'Seoul',
-                cc: 'kr',
-                isActive: false
-            }
-        ];
+                {
+                    name: 'New York',
+                    cc: 'us',
+                    isActive: false
+                },
+                {
+                    name: 'Tokyo',
+                    cc: 'jp',
+                    isActive: false
+                },
+                {
+                    name: 'Seoul',
+                    cc: 'kr',
+                    isActive: false
+                }
+            ];
 
             scope.selectedIndex = 0;
 
