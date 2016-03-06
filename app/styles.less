@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.weather-box {
+  background: -webkit-radial-gradient(center, ellipse cover, rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  width:600px;
+  height:540px;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  overflow: hidden;
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 60px)
+  }
+  .splash {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    -webkit-animation: .8s squeeze 4s ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    h2 {
+      font-size:20px;
+      color: #EF2D27;
+      opacity: 0;
+      font-weight: 600;
+      margin: 20px 0;
+      -webkit-animation: .8s fadeIn .5s ease-in-out, .9s fadeOut 3s ease-in-out;
+      -webkit-animation-fill-mode: forwards;
+    }
+    .logo {
+      width: 70px;
+      height: 15px;
+      opacity: 0;
+      background-image: url('data:image/svg+xml;charset=US-ASCII,<%3Fxml%20version%3D"1.0"%20encoding%3D"utf-8"%3F><!DOCTYPE%20svg%20PUBLIC%20"-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN"%20"http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd"><svg%20version%3D"1.1"%20id%3D"Layer_1"%20xmlns%3D"http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg"%20xmlns%3Axlink%3D"http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink"%20x%3D"0px"%20y%3D"0px"%20%20width%3D"141px"%20height%3D"30px"%20viewBox%3D"0%200%20141%2030"%20enable-background%3D"new%200%200%20141%2030"%20xml%3Aspace%3D"preserve"><g>%20<g>%20%20<g>%20%20%20<path%20fill%3D"%23C8C8C8"%20d%3D"M83.1%2C18.8h6.8v3.7c-0.9%2C0.7-2%2C1.3-3.2%2C1.8C85.4%2C24.8%2C84.2%2C25%2C83%2C25c-2.5%2C0-4.5-0.9-6.1-2.6%20%20%20%20c-1.5-1.7-2.3-4.3-2.3-7.7c0-3.2%2C0.8-5.6%2C2.3-7.2C78.4%2C5.8%2C80.5%2C5%2C83%2C5c1.7%2C0%2C3.1%2C0.4%2C4.3%2C1.2c1.1%2C0.8%2C1.9%2C1.9%2C2.3%2C3.4l5.9-1.1%20%20%20%20c-0.6-2.7-1.9-4.8-3.9-6.3C89.5%2C0.8%2C86.7%2C0%2C83%2C0c-2.8%2C0-5.1%2C0.5-7%2C1.4c-2.5%2C1.3-4.3%2C3.1-5.6%2C5.4c-1.3%2C2.3-1.9%2C5-1.9%2C8.1%20%20%20%20c0%2C2.8%2C0.6%2C5.4%2C1.7%2C7.7c1.1%2C2.4%2C2.8%2C4.2%2C5.1%2C5.5c2.3%2C1.3%2C4.9%2C1.9%2C8%2C1.9c2.4%2C0%2C4.8-0.5%2C7.1-1.4c2.3-0.9%2C4.1-1.9%2C5.4-3.1V14H83.1%20%20%20%20V18.8z%20M108.8%2C8c-2.1%2C0-3.9%2C0.5-5.6%2C1.4c-1.7%2C0.9-3%2C2.2-3.9%2C4c-0.9%2C1.7-1.4%2C3.5-1.4%2C5.4c0%2C2.4%2C0.5%2C4.5%2C1.4%2C6.1%20%20%20%20c0.9%2C1.7%2C2.3%2C3%2C4%2C3.8c1.8%2C0.9%2C3.6%2C1.3%2C5.5%2C1.3c3.1%2C0%2C5.7-1%2C7.8-3.1c2.1-2.1%2C3.1-4.7%2C3.1-7.9c0-3.2-1-5.8-3.1-7.8%20%20%20%20C114.6%2C9%2C112%2C8%2C108.8%2C8z%20M112.5%2C23.8c-1%2C1.1-2.2%2C1.7-3.7%2C1.7c-1.5%2C0-2.7-0.6-3.7-1.7c-1-1.1-1.5-2.7-1.5-4.8%20%20%20%20c0-2.1%2C0.5-3.7%2C1.5-4.8c1-1.1%2C2.2-1.7%2C3.7-1.7c1.5%2C0%2C2.7%2C0.6%2C3.7%2C1.7c1%2C1.1%2C1.5%2C2.7%2C1.5%2C4.7C114%2C21.1%2C113.5%2C22.7%2C112.5%2C23.8z%20%20%20%20%20M134.8%2C8.5l-4%2C10.7c-0.2%2C0.6-0.4%2C1.2-0.6%2C1.8c-0.1%2C0.3-0.3%2C0.9-0.6%2C1.8l-1.2-3.6l-4-10.7h-5.9l8.5%2C21h5l8.4-21H134.8z"%2F>%20%20<%2Fg>%20<%2Fg>%20<path%20fill%3D"%23EF2D27"%20d%3D"M16.6%2C29.5V17.3L27.3%2C0.5h-6.8L13.8%2C12L6.9%2C0.5H0l10.7%2C16.8v12.2H16.6z"%2F>%20<path%20fill%3D"%23EF2D27"%20d%3D"M23.3%2C24.8c0.9%2C1.7%2C2.3%2C3%2C4%2C3.8c1.8%2C0.9%2C3.6%2C1.3%2C5.5%2C1.3c3.1%2C0%2C5.7-1%2C7.8-3.1c2.1-2.1%2C3.1-4.7%2C3.1-7.9%20%20c0-3.2-1-5.8-3.1-7.8C38.7%2C9%2C36.1%2C8%2C32.9%2C8c-2.1%2C0-3.9%2C0.5-5.6%2C1.4c-1.7%2C0.9-3%2C2.2-3.9%2C4c-0.9%2C1.7-1.4%2C3.5-1.4%2C5.4%20%20C22%2C21.1%2C22.4%2C23.2%2C23.3%2C24.8z%20M29.2%2C14.2c1-1.1%2C2.2-1.7%2C3.7-1.7c1.5%2C0%2C2.7%2C0.6%2C3.7%2C1.7c1%2C1.1%2C1.5%2C2.7%2C1.5%2C4.7%20%20c0%2C2.1-0.5%2C3.7-1.5%2C4.8c-1%2C1.1-2.2%2C1.7-3.7%2C1.7c-1.5%2C0-2.7-0.6-3.7-1.7c-1-1.1-1.5-2.7-1.5-4.8C27.7%2C16.9%2C28.2%2C15.3%2C29.2%2C14.2z"%2F>%20<path%20fill%3D"%23EF2D27"%20d%3D"M65.3%2C29.5v-21h-5.6v8.9c0%2C3-0.1%2C4.9-0.4%2C5.7c-0.3%2C0.8-0.8%2C1.4-1.6%2C1.9c-0.8%2C0.5-1.6%2C0.8-2.6%2C0.8%20%20c-0.8%2C0-1.5-0.2-2.1-0.6c-0.5-0.4-0.9-0.9-1.1-1.6c-0.2-0.7-0.3-2.5-0.3-5.4V8.5H46v13.3c0%2C2%2C0.3%2C3.5%2C0.8%2C4.7%20%20c0.5%2C1.1%2C1.3%2C2%2C2.4%2C2.6c1.1%2C0.6%2C2.4%2C0.9%2C3.8%2C0.9c1.4%2C0%2C2.7-0.3%2C4-1c1.3-0.6%2C2.3-1.5%2C3-2.7v3.1H65.3z"%2F><%2Fg><%2Fsvg>');
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size:100%;
+      -webkit-animation: 1.2s fadeInZoom 1.5s ease-in-out;
+      -webkit-animation-fill-mode: forwards;
+    }
+  }
+}
+
+.about {
+  float: left;
+  margin-left: 20px;
+  img {
+    height: 30px;
+    opacity: .5;
+    transition: opacity .3s;
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+.credits {
+  float: right;
+  display: block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  img {
+    width: 60px;
+    opacity: .5;
+    transition: opacity .3s;
+    &:hover {
+      opacity: .9;
+
+    }
+  }
+}
+
+.prev, .next {
+  font-size: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.prev {
+  margin-right: 20px;
+}
+
+.next {
+  margin-left: 30px;
+}
+
+.country-selector {
+  display: flex;
+  flex-direction: row;
+  &.item {
+    margin-bottom: 30px;
+  }
+}
+
+.countries {
+  a {
+    display: none;
+    font-size: 22px;
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.item {
+  margin: 10px 0;
+}
+
+.temperature {
+  span {
+    font-size: 60px;
+    font-weight: 300;
+  }
+  font-size: 50px;
+}
+
+.city {
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.pressure, .humidity {
+  span {
+    font-weight: 300;
+    margin-left: 10px;
+  }
+
+}
+
+#description {
+  font-size: 28px;
+}
+
+@-webkit-keyframes fadeInZoom {
+  0%  {width:70px;opacity:0; height:15px;}
+  60% {width: 340px;opacity: .7; height: 80px; }
+  100% {width: 280px;opacity: 1; height: 60px; }
+
+}
+@-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@-webkit-keyframes squeeze {
+  0%  {margin-bottom:100%;}
+  100%  {height:0; display:none;}
+
+}
+/*
+This is comment */
