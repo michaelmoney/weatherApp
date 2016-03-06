@@ -1,1 +1,53 @@
-<div>This is weather App {{title}}</div>
+<section class="weather-box">
+    <div class="splash">
+        <h2>We believe in the power of participation.</h2>
+        <div class="logo"></div>
+
+    </div>
+    <div class="inner">
+<!--
+        <div class="item country-selector">
+            <div class="prev">&#60;</div>
+            <div class="countries">
+                <a class="active" data-city="los angeles, us">Los Angeles</a>
+                <a data-city="warsaw,pl">Warsaw</a>
+                <a data-city="tokyo,jp">Tokyo</a>
+                <a data-city="london,uk">London</a>
+                <a data-city="new york,us">New York</a>
+                <a data-city="seoul,kr">Seul</a>
+            </div>
+            <div class="next">&#62;</div>
+        </div>
+-->
+
+        <div class="city item">
+            <span id="city">{{weather.city || 'brak'}}</span>, <span id="cc">{{weather.cc || 'brak'}}</span>
+        </div>
+        <div class="description item">
+            <span id="description">{{weather.description || 'brak'}}</span>
+        </div>
+        <div class="icon item">
+            <img src="" id="icon"/>
+        </div>
+        <div class="temperature item">
+            <span id="temperature">{{weather.temp || '--'}}</span>&deg;C
+        </div>
+        <div class="humidity item">
+            Wilgotność:<span id="humidity">{{weather.humidity || '--'}}</span>%
+        </div>
+        <div class="pressure item">
+            Ciśnienie:<span id="pressure">{{weather.pressure || '--'}}</span>hPa
+        </div>
+    </div>
+
+    </div>
+<!--    <section class="credits">
+        <img src="http://logonoid.com/images/accuweather-logo.png"/>
+    </section>-->
+    <!--
+        <section class="about">
+            <img src="http://michaelmoney.pl/img/logo.png" alt="Michael Money logo">
+        </section>
+    -->
+
+</section>
