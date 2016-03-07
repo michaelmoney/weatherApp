@@ -1,0 +1,31 @@
+{
+  "name": "WeatherApp",
+  "version": "0.0.1",
+  "author": {
+    "name": "Michael Money",
+    "url": "http://michaelmoney.pl"
+  },
+  "description": "Get weather from the biggest cities in the world",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "options": {
+    "version": "^0.13.0"
+  },
+  "window": {
+    "title": "Weather App",
+    "toolbar": false,
+    "width": 600,
+    "height": 540,
+    "max_width": 600,
+    "max_height": 540,
+    "min_width": 600,
+    "min_height": 540,
+    "icon": "icon.icns"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "pretty-bytes": "^1.0.2"
+  }
+}
