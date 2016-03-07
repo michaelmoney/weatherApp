@@ -2,3 +2,7 @@
 .idea
 node_modules
 app/styles.css
+dist
+cache
+build
+app/index.js.map
