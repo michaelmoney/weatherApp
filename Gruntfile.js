@@ -3,12 +3,23 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         nwjs: {
-            options: {
-                platforms: ['osx64'],
-                buildDir: 'build', // builded NW destination folder
-                version: "0.12.3"
+            win: {
+                options: {
+                    platforms: ['win32'],
+                    buildDir: 'build', // builded NW destination folder
+                    version: "0.12.3"
+                },
+                src: ['dist/**'] // app source
             },
-            src: ['dist/**'] // app source
+            osx: {
+                options: {
+                    platforms: ['osx64'],
+                    buildDir: 'build', // builded NW destination folder
+                    version: "0.12.3"
+                },
+                src: ['dist/**'] // app source
+            }
+
         },
         babel: {
             options: {
@@ -57,7 +68,9 @@ module.exports = function(grunt) {
 
 
     // Main build task
-    grunt.registerTask('build', ['less:dev', 'babel','copy:dist', 'nwjs']);
+    grunt.registerTask('build:osx', ['less:dev', 'babel','copy:dist', 'nwjs:osx']);
+    grunt.registerTask('build:win', ['less:dev', 'babel','copy:dist', 'nwjs:win']);
+
     grunt.registerTask('serve', ['watch:all']);
 
 
