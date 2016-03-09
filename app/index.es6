@@ -94,7 +94,11 @@ weatherApp.directive('weatherApp', ['$http', '$httpParamSerializer', function ($
                     cc: 'uk',
                     isActive: false
                 },
-
+                {
+                    name: 'Radom',
+                    cc: 'pl',
+                    isActive: true
+                },
                 {
                     name: 'New York',
                     cc: 'us',
@@ -103,6 +107,16 @@ weatherApp.directive('weatherApp', ['$http', '$httpParamSerializer', function ($
                 {
                     name: 'Tokyo',
                     cc: 'jp',
+                    isActive: false
+                },
+                {
+                    name: 'Lublin',
+                    cc: 'pl',
+                    isActive: true
+                },
+                {
+                    name: 'Melbourne',
+                    cc: 'au',
                     isActive: false
                 },
                 {
