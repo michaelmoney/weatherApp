@@ -1,4 +1,4 @@
-# weatherApp
+# Weather App
  Simple weather desktop application built with NW.JS, Angular, HTML, Less and Open Weather API.
 
 <img src="http://michaelmoney.pl/img/new_splash.jpg" alt="Weather App" />
@@ -6,7 +6,7 @@
 
 ## Getting Started
 
-### 1) Clone the GIT project
+### 1) Clone project repo:
  ```
  https://github.com/michaelmoney/weatherApp.git
  ```
