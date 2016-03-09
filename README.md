@@ -6,13 +6,11 @@ App with NW.js and NWBuilder to create OSX, Linux and Windows desktop app from J
 
 ### 1) Clone the GIT project
  ```
- https://github.com/michaelmoney/weatherApp.gi
- 
+ https://github.com/michaelmoney/weatherApp.git
  ```
  
 ```
  git@github.com:michaelmoney/weatherApp.git
-
  ```
 
 ### 2) In terminal run:
