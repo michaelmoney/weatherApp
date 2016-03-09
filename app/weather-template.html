@@ -1,30 +1,32 @@
 <section class="weather-box">
-<!--    <div class="splash">
+    <div class="splash">
         <h2>We believe in the power of participation.</h2>
         <div class="logo"></div>
+    </div>
 
-    </div>-->
     <section class="menu" ng-show="isMenuVisible">
         <h3>Ustawienia wyświetlania:</h3>
         <div class="checkboxes">
-            <div  class="checkbox" ng-click="showMaxMinTemp = !showMaxMinTemp"><i ng-class="{'checked': showMaxMinTemp}" class="fa fa-check"></i>max. i min. temperatura</div>
-
-            <div  class="checkbox" ng-click="showHumidity = !showHumidity"><i ng-class="{'checked': showHumidity}" class="fa fa-check"></i>Wilgotność</div>
-            <div  class="checkbox" ng-click="showPressure = !showPressure"><i ng-class="{'checked': showPressure}" class="fa fa-check"></i>Ciśnienie</div>
-
+            <div class="checkbox" ng-click="showMaxMinTemp = !showMaxMinTemp"><i ng-class="{'checked': showMaxMinTemp}"
+                                                                                 class="fa fa-check"></i>max. i min.
+                temperatura
+            </div>
+            <div class="checkbox" ng-click="showHumidity = !showHumidity"><i ng-class="{'checked': showHumidity}"
+                                                                             class="fa fa-check"></i>Wilgotność
+            </div>
+            <div class="checkbox" ng-click="showPressure = !showPressure"><i ng-class="{'checked': showPressure}"
+                                                                             class="fa fa-check"></i>Ciśnienie
+            </div>
         </div>
         <div class="close-menu" ng-click="isMenuVisible = !isMenuVisible">Powrót</div>
 
+        <section class="credits">
+            <p>Copyrights</p>
+            <img src="http://michaelmoney.pl/img/logo.png" alt="Michael Money logo">
+        </section>
+
     </section>
     <div class="inner">
-<!--        <div class="item country-selector">
-            <div class="prev" ng-click="prev()">&#60;</div>
-            <div class="countries" ng-repeat="city in cities track by $index">
-                <a ng-class="{'active': city.isActive}">{{city.name}}</a>
-            </div>
-
-        </div>-->
-
         <div class="city item">
             <div class="prev" ng-click="prev()">&#60;</div>
             <span id="city">{{weather.city || 'brak'}}</span>, <span id="cc">{{weather.cc || 'brak'}}</span>
@@ -52,12 +54,11 @@
     </div>
 
     </div>
-<!--    <section class="credits">
-        <img src="http://logonoid.com/images/accuweather-logo.png"/>
-    </section>-->
-        <section class="about" ng-click="isMenuVisible = !isMenuVisible">
-            <i class="fa fa-cog"></i> Settings
-           <!-- <img src="http://michaelmoney.pl/img/logo.png" alt="Michael Money logo">-->
-        </section>
+
+    <section class="about" ng-click="isMenuVisible = !isMenuVisible">
+        <i class="fa fa-cog"></i> Ustawienia
+    </section>
 
 </section>
+
+
