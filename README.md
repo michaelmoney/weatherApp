@@ -2,16 +2,17 @@
 App with NW.js and NWBuilder to create OSX, Linux and Windows desktop app from JS
 
 
-#How to run?
-1) Clone the GIT project
-- https://github.com/michaelmoney/weatherApp.git
-- git@github.com:michaelmoney/weatherApp.git
+## Getting Started
 
-2) In terminal run:
-npm install
+### 1) Clone the GIT project
+ ```https://github.com/michaelmoney/weatherApp.git```
+``` git@github.com:michaelmoney/weatherApp.git```
 
-3a) Dev mode
-grunt serve
+### 2) In terminal run:
+```npm install```
 
-3b) Build package
-grunt build
+### 3a) Dev mode
+```grunt serve```
+
+### 3b) Build package
+```grunt build```
