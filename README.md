@@ -1,5 +1,5 @@
 # weatherApp
- Simple weather desktop application build with NW.JS, Angular, HTML, Less and Open Weather API.
+ Simple weather desktop application built with NW.JS, Angular, HTML, Less and Open Weather API.
 
 <img src="http://michaelmoney.pl/img/new_splash.jpg" alt="Weather App" />
 
@@ -30,7 +30,7 @@ grunt serve
 grunt build:osx
 ```
 
-### 4a) Build package Windows
+### 4b) Build package Windows
 ```
 grunt build:win
 ```
