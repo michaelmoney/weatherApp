@@ -10,23 +10,6 @@ module.exports = function(grunt) {
             },
             src: ['dist/**'] // app source
         },
-
-        jslint: {
-            client: {
-                src: [
-                    'app/js/*.js'
-                ],
-                directives: {
-                    browser: true,
-                    predef: [
-                        'jQuery'
-                    ]
-                },
-                options: {
-                    errorsOnly: true
-                }
-            }
-        },
         babel: {
             options: {
                 sourceMap: true,
@@ -51,8 +34,8 @@ module.exports = function(grunt) {
         },
         watch:{
             all: {
-                files: ['app/*.es6', 'app/*.less'],
-                tasks: ['babel', 'less:dev']
+                files: ['app/*.es6', 'app/*.less', 'app/*.html'],
+                tasks: ['babel', 'less:dev','copy']
             }
         },
         copy: {
@@ -74,7 +57,6 @@ module.exports = function(grunt) {
 
 
     // Main build task
-    grunt.registerTask('default', ['jslint']);
     grunt.registerTask('build', ['less:dev', 'babel','copy:dist', 'nwjs']);
     grunt.registerTask('serve', ['watch:all']);
 
