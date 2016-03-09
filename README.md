@@ -20,17 +20,17 @@
 npm install
 ```
 
-### 3) Dev mode
+### 3) Dev mode (with file watchers):
 ```
 grunt serve
 ```
 
-### 4a) Build package for OSX
+### 4a) Build package for OSX:
 ```
 grunt build:osx
 ```
 
-### 4b) Build package Windows
+### 4b) Build package Windows:
 ```
 grunt build:win
 ```
