@@ -53,7 +53,7 @@ module.exports = function(grunt) {
             dist: {
                 expand: true,
                 cwd: 'app',
-                src: ['index.html', 'weather-template.html', 'package.json', 'angular.min.js'],
+                src: ['index.html', 'weather-template.html', 'package.json', 'angular.min.js', 'icon.ico', 'icon.icns'],
                 dest: 'dist/'
             }
         }
