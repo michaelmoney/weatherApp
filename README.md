@@ -18,12 +18,17 @@ App with NW.js and NWBuilder to create OSX, Linux and Windows desktop app from J
 npm install
 ```
 
-### 3a) Dev mode
+### 3) Dev mode
 ```
 grunt serve
 ```
 
-### 3b) Build package
+### 4a) Build package for OSX
 ```
-grunt build
+grunt build:osx
+```
+
+### 4a) Build package Windows
+```
+grunt build:win
 ```
