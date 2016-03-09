@@ -1,5 +1,6 @@
 # weatherApp
-App with NW.js and NWBuilder to create OSX, Linux and Windows desktop app from JS
+ Simple weather desktop application build with NW.JS, Angular, HTML, Less and Open Weather API.
+
 <img src="http://michaelmoney.pl/img/new_splash.jpg" alt="Weather App" />
 
 
