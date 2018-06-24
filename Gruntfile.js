@@ -15,7 +15,7 @@ module.exports = function(grunt) {
                 options: {
                     platforms: ['osx64'],
                     buildDir: 'build', // builded NW destination folder
-                    version: "0.12.3"
+                    version: '0.14.6',
                 },
                 src: ['dist/**'] // app source
             }

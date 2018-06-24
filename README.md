@@ -1,8 +1,15 @@
 # Weather App
  Simple weather desktop application built with NW.JS, Angular, HTML, Less and Open Weather API.
 
-<img src="http://michaelmoney.pl/img/new_splash.jpg" alt="Weather App" />
+![Preview1](./weatherApp_splash.jpg)
 
+### Application layout (OSX)
+
+![Preview2](./weatherApp_layout.jpg)
+
+### Application settings (OSX)
+
+![Preview3](./weatherApp_settings.jpg)
 
 ## Getting Started
 
@@ -34,3 +41,9 @@ grunt build:osx
 ```
 grunt build:win
 ```
+
+### 5) Open application from
+```
+/build/WeatherApp/{OS}/
+```
+
